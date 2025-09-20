@@ -1,0 +1,77 @@
+<html>
+
+
+<head>
+<title>Test Tickle</title>
+<link rel="icon" href="assets/batman.png"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+
+
+
+<body>
+<div >
+        <image id="afterTitle" src="assets/backgroundTitle.gif" style="position: fixed; display: none; width: 100%; height: 100%;">
+        <video  id="batVid" autoplay muted style="position: fixed; min-width: 100%; min-height: 100%; right: 0; bottom: 0;">
+            <source  src="assets/intro.mp4" type="video/mp4">
+        </video>
+        <div style="height: 500;"></div>
+    <div id="cBut"  style="display: none;">
+        <a class = "center" href="#">    
+            <button class="mainButts" id="contBut" style="position: absolute; height: 100; width: 200; font-size: 40px; 
+             ">
+            Skip
+            </button>
+            
+        </a>
+        <h2  style="font-size: 50px; margin-top: 15%; position: absolute; color: aliceblue; ">Click Anywhere to Continue</h2>
+    </div>
+        <div style="height: 300px;"></div>
+        
+    <div style="margin-left: 45%; ">
+        <a href="gotham.html">
+            <button class="mainButts" id="butty" style= "display: none; position: fixed; 
+            height: 60; width: 10%; font-size: 40px;">
+            Start
+            </button>
+        </a>
+    </div>
+</div>
+</body>
+
+<script>
+let vid = document.getElementById("batVid");
+let contBut = document.getElementById("cBut");
+let contBut2 = document.getElementById("contBut");
+let count = 0;
+document.addEventListener('click', function() {
+    count++;
+    if(count%2==1){
+        vid.pause();
+        contBut.style.display = 'block';
+    }
+
+    else{
+        vid.play();
+        contBut.style.display = 'none'; 
+    }
+
+});
+
+contBut2.addEventListener('click', () => {
+    vid.style.display = 'none';
+        document.getElementById('afterTitle').style.display = 'block';
+        document.getElementById('butty').style.display = 'block';
+})
+
+vid.addEventListener('timeupdate', function(){
+    if(vid.currentTime > 52){
+        vid.style.display = 'none';
+        document.getElementById('afterTitle').style.display = 'block';
+        document.getElementById('butty').style.display = 'block';
+    }
+});
+
+</script>
+
+</html>

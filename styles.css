@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.center{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonClass{
+    font-size: 50px;
+  
+}
+
+
+
+
+
+.funnie{
+    
+    width: 2000px;
+    height: 900px;
+}
+
+
+.bbg{
+    background: url("assets/backgroundTitle.gif") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg2{
+    background: url("assets/intro.mp4") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg3{
+    background: url("assets/bbg3.gif") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg4{
+    background: url("assets/bbg4.gif") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg5{
+    background: url("assets/bPC.PNG") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg6{
+    background: url("assets/bbg6.PNG") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg7{
+    background: url("assets/cells.PNG") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg8{
+    background: url("assets/riddler.png") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg9{
+    background: url("assets/joker.png") center;
+    background-size: cover;
+    height: 100%;
+}
+
+.bbg10{
+    background: url("assets/bbg11.jpg") center;
+    background-size: cover;
+    height: 100%;
+}
+
+
+.mainButts{
+    background-color: cornflowerblue;
+    border-color: blue; 
+    
+}
+
+
+#start{
+    height: 75px;
+    width: 150px;
+
+}
+
+
+.gotButtClass{
+    
+    height: 75px;
+    width: 200px;
+    font-size: 35px;
+}
+

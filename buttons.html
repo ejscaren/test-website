@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <title>Test Tickle</title>
+        <link rel="icon" href="assets/batman.png"/>
+        <link href="styles.css" rel="stylesheet"/>
+    </head>
+
+
+    <body>
+        
+        
+        <div>
+        
+        
+
+        
+    <div class="bbg10">
+        <div style="height: 185;"></div>
+    <div style=" display: flex; justify-content: center; 
+    align-items: center;  height: auto;" >
+    <button id="button1" class="mainButts buttonClass">1</button>
+    <button id="button2" class="mainButts buttonClass">2</button>
+    <button id="button3" class="mainButts buttonClass">3</button>
+    
+    </div>
+    <div style="display: flex; justify-content: center; 
+    align-items: center;  height: auto;" >
+    <button id="button4" class="mainButts buttonClass">4</button>
+    <button id="button5" class="mainButts buttonClass">5</button>
+    <button id="button6" class="mainButts buttonClass">6</button>
+    </div>
+
+    <div style="display: flex; justify-content: center; 
+    align-items: center;  height: auto;" >
+    <button id="button7" class="mainButts buttonClass">7</button>
+    <button id="button8" class="mainButts buttonClass">8</button>
+    <button id="button9" class="mainButts buttonClass">9</button>
+    </div>
+
+    <div style="display: flex; justify-content: center; 
+    align-items: center;  height: auto;" >
+    <button id="button0" class="mainButts buttonClass">0</button>
+    </div>
+
+    <div style="height: 120;"></div>
+    
+    
+
+    <div style="width: 30%; margin-left: 35%; border: 3px, solid; border-color: blue; 
+            background-color: cornflowerblue;  ">
+            <h3 style="display: flex; justify-content: center;">The Chapel</h3>
+    
+            <p id="tebox" style="padding-left: 4px; color:crimson;">
+                The alter reveals a keypad. it looks to be some 6 digit code. I may need 
+                to download a  <i>decoder</i> to help me.
+
+
+            </p>
+            <div id="allbuts" class="center" style="display: flex; justify-content: space-between; 
+            padding-bottom: 4px ;">
+                <a style="text-decoration: none;" href="chapel.html">
+                    <button class="mainButts" id="leBut" >Back</button>
+                    </a>
+                <a style="text-decoration: none;" >
+                    <button class="mainButts" id="rest" >reset</button>
+                    </a>
+                <a style="text-decoration: none;" href="batComputer.html">
+                <button class="mainButts" id="leBut" >BatComputer</button>
+                </a>
+            </div>
+            
+            <div id="finButt" class="center" style="display: none; justify-content: center; 
+            padding-bottom: 4px ;">
+            <a style=" text-decoration: none;" href="ENDING.html">
+                <button id="leBut" class="mainButts" >See whats inside?</button>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <script>
+        let clickCount = 0;
+        let othCount = 0;
+    const requiredClicks = 5; // Number of buttons to click before revealing finalButton
+
+    document.getElementById('rest').addEventListener('click', () => {
+        clickCount=0;
+        othCount=0;
+        document.getElementById('tebox').innerHTML = "try now";
+        
+    })
+
+    document.getElementById('button1').addEventListener('click', () => {
+        clickCount += 100;
+        othCount++;
+        checkRevealCondition();
+    });
+
+    document.getElementById('button2').addEventListener('click', () => {
+        if(clickCount==2){
+            clickCount++;
+        }
+        else{
+            clickCount+=100;
+            othCount++;
+        }
+        
+        checkRevealCondition();
+    });
+
+    document.getElementById('button3').addEventListener('click', () => {
+        clickCount+=100;
+        othCount++;
+        
+        checkRevealCondition();
+    });
+
+    document.getElementById('button4').addEventListener('click', () => {
+        if(clickCount==1){
+            clickCount++;
+            othCount++;
+        }
+        else{
+            clickCount+=100;
+            othCount++;
+        }
+        checkRevealCondition();
+    });
+
+    document.getElementById('button5').addEventListener('click', () => {
+        clickCount+=100;
+        othCount++;
+        checkRevealCondition();
+    });
+
+    document.getElementById('button6').addEventListener('click', () => {
+        if(othCount==0){
+        clickCount = 0;
+        othCount++;
+        checkRevealCondition();
+        }
+        else if(clickCount == 3){
+            clickCount++;
+            othCount++;
+        }
+        else{
+            clickCount+=100;
+            othCount++;
+            checkRevealCondition();
+        }
+    });
+
+    document.getElementById('button7').addEventListener('click', () => {
+        if(clickCount==0){
+            clickCount++;
+            othCount++;
+        }
+        else{
+            clickCount+=100;
+            othCount++;
+        }
+        checkRevealCondition();
+    });
+
+    document.getElementById('button8').addEventListener('click', () => {
+        clickCount+=100;
+        othCount++;
+        checkRevealCondition();
+        checkRevealCondition();
+    });
+
+    document.getElementById('button9').addEventListener('click', () => {
+        if(clickCount==4){
+            clickCount++;
+            othCount++;
+        }
+        else{
+            clickCount+=100;
+            othCount++;
+        }
+        checkRevealCondition();
+    });
+
+    document.getElementById('button0').addEventListener('click', () => {
+       
+       
+        clickCount+=100;
+        othCount++;
+        checkRevealCondition();
+    });
+    
+    
+    
+    
+    
+    function checkRevealCondition() {
+        if (clickCount == requiredClicks) {
+            document.getElementById('tebox').innerHTML = "THE BOX OPENS";
+            othCount=0;
+            clickCount=0;
+            document.getElementById('allbuts').style.display = "none";
+            document.getElementById('finButt').style.display = "flex";
+            //document.getElementById('finalButton').style.display = 'block'; // Or 'visibility = "visible"'
+        }
+        else if(othCount == 6){
+            document.getElementById('tebox').innerHTML = "U DDN DO I IT";
+            othCount=0;
+        }
+    }
+    </script>
+    </body>
+
+
+</html>

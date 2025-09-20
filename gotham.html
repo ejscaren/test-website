@@ -1,0 +1,88 @@
+<html>
+
+
+<head>
+<title>Test Tickle</title>
+<link rel="icon" href="assets/batman.png"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+
+
+
+<body>
+
+<div class="bbg3">
+  
+
+
+    <div class="center">
+
+        <a id='dev' href="batcave.html" >
+            <button  style=" margin-top: 240px;" class="mainButts gotButtClass">
+            Batcave
+            </button>
+        </a>
+    </div>
+
+    <div style="height: 270px;"></div>
+
+    <div style="display:flex; justify-content: space-between; margin-left: 100px; margin-right: 100px; ">
+        <a style="text-decoration: none;"  href="asylum.html">
+            <button class="mainButts gotButtClass" id="asButt" style="display:none;" >
+            Asylum
+            </button>
+        </a>
+
+        <a href="chapel.html" style="text-decoration: none;">
+            <button class="mainButts gotButtClass" id='ch' style="display:none;" >
+            Chapel
+            </button>
+        </a>
+
+        
+
+    </div>
+
+    <div class="center" >
+            <input type="text" id="input" style=" height: 40px; margin-top: 100px;" 
+             placeholder="Where to go?">
+             
+        </div>
+        <div class="center" >
+        <button class="mainButts" id="go">GO</button>
+        </div>
+        <div style="height: 15px;"></div>
+        <div class="center" >
+            <p id='msg' style="background-color: black; display: none; color: white; font-size: 20px;">There is no place like that here...</p>
+            </div>
+
+</div>
+</body>
+
+<script>
+document.getElementById('go').addEventListener('click', function(){
+    if(document.getElementById('input').value.toLowerCase() === 'asylum'){
+        document.getElementById('msg').style.display = 'none';
+        document.getElementById('asButt').style.display = 'block';
+    }
+    else if(document.getElementById('input').value.toLowerCase() === 'chapel'){
+        document.getElementById('msg').style.display = 'none';
+        document.getElementById('ch').style.display = 'block';
+    }
+    else if(document.getElementById('input').value.toLowerCase() === 'title'){
+        document.getElementById('msg').style.display = 'none';
+        document.getElementById('dev').href = 'start.html';
+    }
+
+    else{
+        document.getElementById('msg').style.display = 'block';
+    }
+    
+})
+
+
+
+</script>
+
+
+</html>

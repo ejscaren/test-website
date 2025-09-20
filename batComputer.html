@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Test Tickle</title>
+    <link rel="icon" href="assets/batman.png"/>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <div class="bbg5 ">
+        <a href="batcave.html"  style = "position: absolute; text-decoration: none; 
+        display: flex; margin-left: 30px; margin-top: 10px;">
+            <button style="height: 50 px; width: 100px; font-size: 20px;" class="mainButts">Cave</button>
+        </a>
+        <div style="height: 10px;"></div>
+        <div style=" padding-top: 0px; border: 3px, solid; border-color: blue; 
+        background-color: cornflowerblue; margin-left: 600px;  margin-right: 600px; ">
+            <h3 style="display: flex; justify-content: center;">BatComputer</h3>
+        
+            <p style=" padding-left: 290px;">
+            Try looking up the  <i> news</i>
+            </p>
+            
+        </div>
+
+        <div class="center" >
+            <input type="text"  id="putin" style="margin-left: 120px; margin-top: 155px;" 
+             placeholder="search keyword">
+             <button id="sButt" class="mainButts" style="margin-top: 155px;">Search</button>
+        </div>
+        <div class="center">
+            <p id="res" style=" display: none; margin-left: 120px; margin-top: 30px;  font-size: 40px;" >
+            Results
+            </p>
+        </div>
+        <div class="center">
+            <a id='desination' href="gotham.html" style="text-decoration: none;">
+            <button class="mainButts" id="butty" style=" display: none; margin-left: 120px; height: 50px; width: 200px; font-size: 25px;">
+                bruh
+            </button>
+            </a>
+        </div>
+
+        
+    </div>
+
+</body>
+
+<script>
+
+const serchButt = document.getElementById('sButt')
+const button = document.getElementById('butty');
+const putinVal = document.getElementById('putin');
+const result = document.getElementById('res')
+const destination = document.getElementById('desination');
+
+    serchButt.addEventListener('click', function(){
+        
+        if(putinVal.value.toLowerCase() === 'news'){
+            result.innerHTML = 'Results';
+            button.style.display = 'block';
+            result.style.display = 'block';
+            button.innerHTML = 'News';
+            destination.href = 'news.html';
+        }
+        else if(putinVal.value === ''){
+            result.innerHTML = '^Type something thug^';
+            result.style.display = 'block';
+            button.style.display = 'none';
+        }
+
+        else if(putinVal.value === 'again'){
+            result.innerHTML = 'really -_-';
+            result.style.display = 'block';
+            button.style.display = 'none';
+        }
+
+        else if(putinVal.value === 'something thug'){
+            result.innerHTML = '01101000 01100001';
+            result.style.display = 'block';
+            button.style.display = 'none';
+        }
+
+        else if(putinVal.value.toLowerCase() === 'decoder'){
+            result.innerHTML = 'Results';
+            result.style.display = 'block';
+            button.style.display = 'block';
+            button.innerHTML = 'Free Decoder';
+            destination.href = 'decoder.html';
+        }
+
+        else{
+            result.innerHTML = 'No Results, Search Again';
+            result.style.display = 'block';
+            button.style.display = 'none';
+        }
+    })
+   
+
+
+</script>
+
+
+</html>
